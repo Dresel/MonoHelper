@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="ebf1ee53-0b55-4d09-897b-6ed2cd1fb6ec">
+	<Identifier Id="6c2cf559-72a5-4649-b416-b42f09221f68">
 		<Name>MonoHelper</Name>
 		<Author>Christopher Dresel</Author>
 		<Version>1.2</Version>
