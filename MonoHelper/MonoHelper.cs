@@ -168,11 +168,11 @@
 
 			if (!string.IsNullOrEmpty(monoPath))
 			{
-				outputWindowPane.OutputString("\r\nMonoHelper: Mono Installation Path is set.");
+				outputWindowPane.OutputString("MonoHelper: Mono Installation Path is set.\r\n");
 			}
 			else
 			{
-				outputWindowPane.OutputString("\r\nMonoHelper: Mono Installation Path is not set. Trying to get it from registry.");
+				outputWindowPane.OutputString("MonoHelper: Mono Installation Path is not set. Trying to get it from registry.\r\n");
 
 				RegistryKey openSubKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Wow6432Node\\Novell\\Mono");
 
