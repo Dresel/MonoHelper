@@ -1,0 +1,3 @@
+﻿Me, Christopher Dresel, offers this extension for free. Feel free to provide feedback at https://github.com/Dresel/MonoHelper/.
+
+The extension is provided "as is" without express or implied warranty.
