@@ -76,6 +76,10 @@
 				CommandID debugNetMenuCommandID = new CommandID(GuidList.GuidMonoHelperCmdSet, (int)PkgCmdIDList.DebugNetCommandID);
 				MenuCommand debugMenuNetItem = new MenuCommand(DebugNetMenuItemCallback, debugNetMenuCommandID);
 				mcs.AddCommand(debugMenuNetItem);
+
+				CommandID rebuildAndstartMonoMenuCommandID = new CommandID(GuidList.GuidMonoHelperCmdSet, (int)PkgCmdIDList.RebuildAndStartMonoCommandID);
+				MenuCommand rebuildAndstartMonoMenuItem = new MenuCommand(RebuildAndStartMonoItemCallback, rebuildAndstartMonoMenuCommandID);
+				mcs.AddCommand(rebuildAndstartMonoMenuItem);
 			}
 		}
 
@@ -92,6 +96,11 @@
 		private void StartMonoMenuItemCallback(object sender, EventArgs e)
 		{
 			MonoHelper.StartMono(GetDTE());
+		}
+
+		private void RebuildAndStartMonoItemCallback(object sender, EventArgs e)
+		{
+			MonoHelper.RebuildAndStartMono(GetDTE());
 		}
 
 		private void StartNetMenuItemCallback(object sender, EventArgs e)

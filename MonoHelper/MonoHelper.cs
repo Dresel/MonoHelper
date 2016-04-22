@@ -49,6 +49,12 @@
 			outputWindowPane.OutputString("\r\nMonoHelper: Start (Mono Runtime) End");
 		}
 
+		public static void RebuildAndStartMono(DTE2 dte)
+		{
+			XBuild(dte, true);
+			StartMono(dte);
+		}
+
 		public static void StartNet(DTE2 dte)
 		{
 			OutputWindowPane outputWindowPane = PrepareOutputWindowPane(dte);
