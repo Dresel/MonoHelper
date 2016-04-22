@@ -1,7 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<!-- This is the file that defines the actual layout and type of the commands.
 		It is divided in different sections (e.g. command definition, command
@@ -23,7 +22,7 @@
 	<Extern href="vsshlids.h" />
 
 	<!-- Definition of some VSCT specific constants. In this sample we use it for the IDs inside the guidOfficeIcon group. -->
-	<Extern href="msobtnid.h" />
+	<!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
 
 	<!-- The Commands section is where we the commands, menus and menu groups are defined.
 		This section uses a Guid to identify the package that provides the command defined inside it. -->
@@ -54,7 +53,7 @@
 		<Groups>
 			
 			<Group guid="GuidMonoHelperCmdSet" id="MyMenuGroup" priority="0x0600">
-				<Parent guid="GuidMonoHelperCmdSet" id="TopLevelMenu"/>
+				<Parent guid="GuidMonoHelperCmdSet" id="TopLevelMenu" />
 			</Group>
 			
 		</Groups>
@@ -99,6 +98,13 @@
 				</Strings>
 			</Button>
 
+			<Button guid="GuidMonoHelperCmdSet" id="RebuildAndStartMonoCommandID" priority="0x0100" type="Button">
+				<Parent guid="GuidMonoHelperCmdSet" id="MyMenuGroup" />
+				<Strings>
+					<ButtonText>Rebuild and Start (Mono Runtime)</ButtonText>
+				</Strings>
+			</Button>
+
 			<Button guid="GuidMonoHelperCmdSet" id="DebugNetCommandID" priority="0x0100" type="Button">
 				<Parent guid="GuidMonoHelperCmdSet" id="MyMenuGroup" />
 				<Strings>
@@ -117,13 +123,14 @@
 		<GuidSymbol name="GuidMonoHelperCmdSet" value="{66ae7e29-9859-4e84-b953-1502a786e958}">
 
 			<IDSymbol name="MyMenuGroup" value="0x1020" />
-			<IDSymbol name="TopLevelMenu" value="0x1021"/>
+			<IDSymbol name="TopLevelMenu" value="0x1021" />
 
 			<IDSymbol name="XBuildCommandID" value="0x0100" />
 			<IDSymbol name="XRebuildCommandID" value="0x0101" />
 			<IDSymbol name="StartNetCommandID" value="0x0102" />
 			<IDSymbol name="StartMonoCommandID" value="0x0104" />
 			<IDSymbol name="DebugNetCommandID" value="0x0103" />
+			<IDSymbol name="RebuildAndStartMonoCommandID" value="0x0105" />
 		</GuidSymbol>
 	</Symbols>
 

@@ -10,5 +10,6 @@ namespace MonoHelper
 		public const uint StartNetCommandID = 0x102;
 		public const uint DebugNetCommandID = 0x103;
 		public const uint StartMonoCommandID = 0x104;
+		public const uint RebuildAndStartMonoCommandID = 0x105;
 	};
 }
